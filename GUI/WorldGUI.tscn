@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://GUI/ExpLabel.gd" type="Script" id=1]
+[ext_resource path="res://GUI/Label.gd" type="Script" id=2]
+[ext_resource path="res://GUI/ExperienceBar.gd" type="Script" id=3]
+[ext_resource path="res://GUI/BarPlaceholderBackground.png" type="Texture" id=4]
+[ext_resource path="res://GUI/BarPlaceholder.png" type="Texture" id=5]
+[ext_resource path="res://GUI/HealthBar.gd" type="Script" id=6]
+[ext_resource path="res://GUI/StaminaBar.gd" type="Script" id=7]
+[ext_resource path="res://GUI/HealthPlaceholder.png" type="Texture" id=8]
+[ext_resource path="res://GUI/StaminaPlaceholder.png" type="Texture" id=9]
+[ext_resource path="res://icon.png" type="Texture" id=10]
+
+
+[node name="WorldGUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExperienceBar" type="TextureProgress" parent="."]
+margin_left = -0.0427246
+margin_top = 553.615
+margin_right = 118.957
+margin_bottom = 593.615
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpLabel" type="Label" parent="ExperienceBar"]
+margin_left = 2.26474
+margin_top = 5.35455
+margin_right = 42.2647
+margin_bottom = 19.3546
+text = "SampleText"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="ExperienceBar"]
+
+[node name="Portrait" type="TextureRect" parent="."]
+margin_left = 1.0
+margin_top = 489.444
+margin_right = 120.0
+margin_bottom = 555.444
+texture = ExtResource( 10 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Portrait"]
+margin_left = -1.0
+margin_top = 51.0
+margin_right = 67.0
+margin_bottom = 68.0
+text = "Sample Text"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+margin_left = 118.952
+margin_top = 486.0
+margin_right = 126.952
+margin_bottom = 577.0
+value = 100.0
+texture_progress = ExtResource( 8 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="HealthBar"]
+
+[node name="StaminaBar" type="TextureProgress" parent="."]
+margin_left = 127.101
+margin_top = 486.0
+margin_right = 135.101
+margin_bottom = 577.0
+value = 100.0
+texture_progress = ExtResource( 9 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="StaminaBar"]

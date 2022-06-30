@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bensound-summer.ogg-801e08cc1acc09668b89bbff0e0b5f10.oggstr"
+
+[deps]
+
+source_file="res://Audio/bensound-summer.ogg"
+dest_files=[ "res://.import/bensound-summer.ogg-801e08cc1acc09668b89bbff0e0b5f10.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
